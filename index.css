@@ -1,0 +1,41 @@
+
+html{
+    margin-top: 0;
+}
+body{
+    font-size: 16px;
+    color: white;
+    margin-top: 0;
+
+}
+
+/* header style */
+
+.navbar{
+    position: fixed; top: 0; left: 0;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 60, 1);
+    background-color: rgba(0, 0, 60, 1);
+}
+.navbar ul{
+  text-align: center;
+  padding-left: 0;
+  margin: auto;
+}
+.navbar li{
+    list-style-type: none;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.intro{
+    width: 100%;
+    position: relative; top: 150px; left: 150px;
+}
+.intro img{
+    height: 300px;
+    width: 300 px;
+    margin-top: 100px;
+    margin-left: 50%;
+    margin-right: 50%;
+}
