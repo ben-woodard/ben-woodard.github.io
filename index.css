@@ -1,22 +1,16 @@
-html{
-    height: auto;
-    ;
-}
+
 body{
     font-size: 16px;
     margin-top: 0;
     font-family: 'Roboto', sans-serif;
     background-color: whitesmoke;
-   
-
-}
-
+}    
 h1{
     font-family: 'Merriweather', serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 h2{
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 /* nav style*/
@@ -39,7 +33,7 @@ h2{
     display: flex;
     justify-content: center;
     list-style-type: none;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     border: 1px solid black;
     margin: 4rem .5rem;
     padding: .5rem .5rem;
@@ -52,11 +46,13 @@ h2{
     cursor: pointer;
 }
 
+/* Main page "intro" styling */
+
 .intro {
    width: 90%;
    height: auto;
    justify-content: space-between;
-   position: absolute; top: 1rem; left: 5rem; 
+   position: absolute;  left: 3rem; 
    display: flex;
    flex-wrap: wrap;
 }
@@ -64,40 +60,51 @@ h2{
  .blurb1{
   display: block;  
   width: 30%;
-  margin-top: 2rem;
   margin-left: 9rem;
   word-spacing: .5rem;
   letter-spacing: .2rem;
-  line-height: 2.5rem;
-  z-index: 1;
+  line-height: 3rem;
+  z-index: 2;
 }
 .blurb1 h1{
    width: 37.5rem;
    margin-left: 0rem;
+   color: rgba(255, 131, 0, 1)
 }
  .blurb1 h2{
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-left: 2rem;
  }
  .blurb2{
-   margin-top: 10rem;
+   margin-top: 5rem;
+   margin-left: 2rem;
    word-spacing: .5rem;
    letter-spacing: .2rem;
    width: 40%;
-   z-index: 1;
-   line-height: 2.5rem;
+   z-index: 2;
+   line-height: 3rem;
+}
+.blurb2 h2{
+    margin-left: 4rem;
+}
+.skills{
+    color: rgba(255, 131, 0, .7);
+    display: flex;
+    position: absolute; left: 58rem; top: 29rem;
+    z-index: 0;
+}
+.skills h2{
+    margin-bottom: 0;
 }
 
 .headshot{
     width: 80%;
-    position: absolute; top: 8rem; left: 10rem;
-    z-index: 0;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute; top: 7rem; left: 13rem;
+    z-index: 1;
 }
 .headshot img{
     width: 100%;
     height: auto;
-    z-index: 0;
+    z-index: 5;
 } 
 
