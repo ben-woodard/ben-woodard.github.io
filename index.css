@@ -60,7 +60,7 @@ h2{
  .blurb1{
   display: block;  
   width: 30%;
-  margin-left: 9rem;
+  margin-left: 7rem;
   word-spacing: .5rem;
   letter-spacing: .2rem;
   line-height: 3rem;
@@ -69,37 +69,39 @@ h2{
 .blurb1 h1{
    width: 37.5rem;
    margin-left: 0rem;
+   margin-top: 2rem;
    color: rgba(255, 131, 0, 1)
 }
  .blurb1 h2{
-    margin-top: 1rem;
-    margin-left: 2rem;
+   margin-left: 2rem;
+   margin-top: 0;
  }
  .blurb2{
-   margin-top: 5rem;
-   margin-left: 2rem;
+   margin-top:5rem;
+   margin-left: 10rem;
    word-spacing: .5rem;
    letter-spacing: .2rem;
    width: 40%;
-   z-index: 2;
    line-height: 3rem;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
 }
-.blurb2 h2{
-    margin-left: 4rem;
+.toph2{
+    margin-left: 2rem;
+    margin-top: 6rem;
 }
-.skills{
-    color: rgba(255, 131, 0, .7);
-    display: flex;
-    position: absolute; left: 58rem; top: 29rem;
-    z-index: 0;
-}
+
 .skills h2{
+    color: rgba(255, 131, 0, .7);
+    position: absolute; left: 55rem; top: 27rem;
     margin-bottom: 0;
+    z-index: 0;
 }
 
 .headshot{
     width: 80%;
-    position: absolute; top: 7rem; left: 13rem;
+    position: absolute; top: 6rem; left: 10.5rem;
     z-index: 1;
 }
 .headshot img{
@@ -107,4 +109,3 @@ h2{
     height: auto;
     z-index: 5;
 } 
-
