@@ -1,0 +1,398 @@
+html,body {
+  margin:0;
+  padding:0;
+}
+
+
+body{
+  font-size: 16px;
+  margin-top: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: whitesmoke;
+}    
+h1{
+  font-family: 'Merriweather', serif;
+  font-size: 3rem;
+}
+h2{
+  font-size: 2.5rem;
+  font-family: 'Merriweather', serif;
+
+}
+
+h3{
+  font-size: 2rem;
+}
+
+p{
+  line-height: 2rem;
+}
+
+/* nav style*/
+
+.navbar{
+  position: fixed; top: 0; left: 0;
+  height: 100%;
+  display: flex;
+  border: 1px solid black;
+  background-color: black;
+  align-items: center;
+}
+.navbar ul{
+  text-align: center;
+  padding-left: 0;
+  padding-top: auto;
+  padding-bottom: auto;
+}
+.navbar li{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  font-size: 1.25rem;
+  border: 1px solid black;
+  margin: 4rem .5rem;
+  padding: .5rem .5rem;
+  color: white;
+}
+.navbar li:hover{
+  border: solid 1px rgba(255, 131, 0, 1);
+  background-color: rgba(255, 131, 0, 1);
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-link{
+  text-decoration: none;
+  color: white;
+}
+
+/* Main page "intro" styling */
+
+.blurb1{
+display: flex;
+flex-wrap: wrap;
+margin-left: 17%;
+margin-top: 12rem;
+width: 40%;
+word-spacing: .5rem;
+letter-spacing: .2rem;
+line-height: 2rem;
+z-index: 2;
+}
+
+.blurb1 h1{
+ color: rgba(255, 131, 0, 1)
+}
+
+.about-me-blurb {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 2s, height 2s;
+}
+
+.about-me-blurb.show{
+  display: block;
+  opacity: 1;
+  height: auto;
+  word-spacing: .2;
+}
+
+.resume-link-container{
+  width: 70%;
+  margin-top: 10rem;
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.resume-link-container.adjust{
+  width: 70%;
+  margin-top: 6rem;
+  margin-left: 5%rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#contact-modal-open{
+  border: 1px solid black;
+  border-radius: 2rem;
+  height: 4rem;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  letter-spacing: .2rem;
+}
+
+#contact-modal-open:hover{
+  border: solid 1px rgba(255, 131, 0, 1);
+  background-color: rgba(255, 131, 0, 1);
+  cursor: pointer;
+}
+
+#resume-link{
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+#resume-link:hover {
+  border: solid 1px rgba(255, 131, 0, 1);
+  background-color: rgba(255, 131, 0, 1);
+  cursor: pointer;
+}
+
+#github-img{
+  width: auto;
+  position: absolute; top: 9rem; left: 65%;
+}
+
+
+#github-intro.none{
+  display: none;
+}
+
+/* Contact Modal Container */
+
+/* Modal container */
+.contact-modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  bottom: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000; /* Ensure it is above the overlay */
+}
+
+/* Show the modal container */
+.contact-modal-container.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* Modal styling */
+.contact-modal {
+  background-color: whitesmoke;
+  border: .25rem solid black;
+  border-radius: 1rem;
+  padding: 2rem 3rem 4rem 3rem;
+  width: 40rem;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Form container */
+#form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* Even vertical spacing */
+}
+
+/* Form elements */
+#form-container input, 
+#form-container textarea, 
+#form-container button {
+  width: 100%; 
+  padding: .5rem; 
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  box-sizing: border-box; 
+}
+
+/* Contact button */
+.contact-button{
+  border: 1px solid black;
+  border-radius: 2rem;
+  height: 3rem;
+  padding: .5rem 1rem;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  letter-spacing: .2rem;
+}
+
+.contact-button:hover{
+  background-color: rgba(255, 131, 0, 1);
+}
+
+/* Background overlay for blurring */
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 999; /* Ensure it is behind the modal */
+}
+
+/* Show the overlay when modal is open */
+.contact-modal-container.show ~ .background-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Projects Section */
+#recent-projects {
+  width: 70%;
+  margin: 10rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#projects-header {
+  margin: 0 auto;
+  color: rgba(255, 131, 0, 1);
+}
+
+#projects-section {
+  width: 80%;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box; 
+  border: .25rem solid black;
+}
+
+
+.project-container {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  padding: 2rem 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.project-split{
+  width: 90%;
+  height: .25rem;
+  margin: 0 auto;
+  background-color: rgba(255, 131, 0, 1);
+}
+
+.project-image {
+  max-width: 100%;
+  width: 30%;
+  height: auto;
+}
+
+.project-info {
+  width: 50%;
+}
+
+.project-link{
+  text-decoration: none;
+  color: black;
+}
+
+.project-link:hover{
+  color: rgba(255, 131, 0, 1);
+}
+
+/* Screen Size adjustments */
+
+@media only screen and (max-width: 1500px){
+   .blurb1 h1{
+    line-height: 3rem;
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  .resume-link-container{
+    margin: 0;
+    width: 100%;
+  }
+  #github-img{
+   display: none;
+  }
+  .blurb1{
+    margin: auto;
+  }
+
+  main{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #recent-projects{
+    margin-top: 3rem;
+  }
+}
+
+
+@media only screen and (max-width: 800px){
+
+  .resume-link-container{
+    
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  #github-img{
+   display: none;
+  }
+  .blurb1{
+    margin: auto;
+  }
+
+  main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  #recent-projects{
+    margin-top: 3rem;
+    margin-left: 7rem;
+    width: auto;
+  }
+
+  #resume-link{ 
+    margin-top: 2rem;
+  }
+
+  .contact-modal{
+    border: none;
+  }
+  
+}
+
+@media only screen and (max-width: 580px){
+
+
+  
+}
